@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MATERIA BASICS — Básicos premium para todos los días</title>
+<meta name="description" content="Ropa interior femenina en algodón peruano de exportación. No marca, libre de elásticos. Pack de 10 cacheteros a S/109. Envíos a todo el Perú.">
+<meta name="theme-color" content="#E0DBD7">
+<link rel="icon" href="./assets/logo.jpg">
+<style>
+  :root{
+    --greige:#E0DBD7;
+    --crema:#EFECE7;
+    --papel:#F7F5F2;
+    --tinta:#1A1A1A;
+    --tinta-2:#57514D;
+    --nude:#DEC7B7;
+    --canela:#7D5F55;
+    --beige:#CEA593;
+    --linea:rgba(26,26,26,.14);
+    --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --pad-sec: clamp(64px, 8.5vw, 116px);
+    /* radios: una sola escala para toda la página */
+    --r-img:14px;
+    --r-box:18px;
+    --r-tile:10px;
+    --head-h:74px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--papel);
+    color:var(--tinta);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
+  }
+  /* height:auto es obligatorio: el atributo height del <img> es un hint de UA que
+     anula aspect-ratio y dejaba las fotos con su alto crudo (tiras de IG de 640px) */
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4,p,ul,figure{margin:0}
+  ul{padding:0;list-style:none}
+  ::selection{background:var(--nude);color:var(--tinta)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--canela);outline-offset:4px;border-radius:3px}
+  /* el header es sticky: los anclajes no deben quedar debajo */
+  section[id]{scroll-margin-top:calc(var(--head-h) + 18px)}
+
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,32px)}
+
+  /* ---------- wordmark ---------- */
+  .mark{display:inline-flex;flex-direction:column;align-items:center;line-height:1}
+  .mark b{font-weight:800;font-size:clamp(15px,1.3vw,17px);letter-spacing:.045em;text-indent:.045em}
+  /* medio letter-spacing de sangría: compensa el espacio sobrante del último carácter */
+  .mark span{margin-top:6px;font-size:8px;font-weight:600;letter-spacing:.44em;text-indent:.22em;color:var(--tinta-2)}
+
+  /* ---------- header ---------- */
+  .head{
+    position:sticky;top:0;z-index:20;
+    background:rgba(224,219,215,.88);
+    -webkit-backdrop-filter:saturate(140%) blur(12px);
+    backdrop-filter:saturate(140%) blur(12px);
+    border-bottom:1px solid rgba(26,26,26,.10);
+  }
+  .head__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:var(--head-h)}
+  .nav{display:flex;gap:clamp(20px,2.6vw,38px)}
+  .nav a{font-size:11px;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--tinta-2);padding:6px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+  .nav a:hover{color:var(--tinta);border-color:var(--tinta)}
+  .head__cta{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:color .2s}
+  .head__cta svg{width:15px;height:15px}
+  .head__cta:hover{color:var(--canela)}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--greige);padding-top:clamp(44px,5.6vw,74px);padding-bottom:clamp(10px,1.8vw,26px);overflow:hidden}
+  .hero__grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(20px,3vw,52px);align-items:end}
+  .hero__copy{padding-bottom:clamp(44px,5.5vw,84px);max-width:620px}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--tinta-2);margin-bottom:18px}
+  h1{
+    font-size:clamp(2.2rem,5.4vw,4.2rem);
+    font-weight:800;
+    letter-spacing:-.03em;
+    line-height:1.02;
+  }
+  .rule-heart{display:flex;align-items:center;gap:14px;margin:26px 0 14px;max-width:330px;color:var(--canela)}
+  .rule-heart::before,.rule-heart::after{content:"";height:1px;background:var(--linea);flex:1}
+  .rule-heart svg{width:17px;height:15px;flex:none}
+  .hero__sub{font-size:clamp(1.02rem,1.5vw,1.2rem);color:var(--tinta-2);letter-spacing:.005em}
+
+  .precio{
+    display:inline-block;margin-top:28px;
+    background:var(--nude);border-radius:var(--r-box);
+    padding:20px clamp(28px,3.4vw,44px) 22px;
+    text-align:center;color:var(--tinta);
+  }
+  .precio__top{font-size:clamp(1rem,1.4vw,1.18rem);font-weight:500;letter-spacing:.005em;line-height:1.2}
+  .precio__a{display:flex;align-items:center;gap:12px;margin:9px 0 3px;font-size:.78rem;color:rgba(26,26,26,.62)}
+  .precio__a::before,.precio__a::after{content:"";height:1px;background:rgba(26,26,26,.22);flex:1}
+  .precio__val{font-size:clamp(2.5rem,4.4vw,3.5rem);font-weight:800;letter-spacing:-.03em;line-height:1}
+  .precio__val i{font-style:normal;font-size:.52em;font-weight:700;letter-spacing:-.01em;vertical-align:.14em;margin-right:.02em}
+
+  .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:30px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--tinta);color:var(--papel);
+    padding:15px 28px;border-radius:999px;
+    font-size:.93rem;font-weight:600;letter-spacing:.015em;
+    transition:background .22s ease, transform .22s ease;
+  }
+  .btn svg{width:16px;height:16px}
+  .btn:hover{background:var(--canela);transform:translateY(-1px)}
+  .lnk{font-size:.93rem;font-weight:600;color:var(--tinta-2);border-bottom:1px solid rgba(26,26,26,.3);padding-bottom:3px;transition:color .2s,border-color .2s}
+  .lnk:hover{color:var(--tinta);border-color:var(--tinta)}
+  .hero__nota{margin-top:24px;font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(26,26,26,.58);font-weight:600}
+
+  .hero__foto{justify-self:end;position:relative}
+  /* la modelo esta descentrada dentro de su foto: se corre a la derecha para
+     equilibrar el aire del fold (el sobrante que se sale es fondo, y .hero recorta) */
+  @media (min-width:1021px){ .hero__foto{margin-right:calc(-1 * clamp(0px,5vw,80px))} }
+  /* la foto trae los bordes difuminados sobre el mismo greige: no lleva radio ni recorte */
+  .hero__foto img{height:clamp(340px,36vw,506px);width:auto}
+
+  /* ---------- beneficios ---------- */
+  .benes{background:var(--crema);padding:clamp(52px,6.5vw,84px) 0}
+  .benes__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,60px)}
+  .bene{display:flex;gap:18px;align-items:flex-start}
+  .bene__ic{flex:none;width:52px;height:52px;border:1px solid rgba(26,26,26,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--canela)}
+  .bene__ic svg{width:26px;height:26px}
+  .bene h3{font-size:1.02rem;font-weight:700;letter-spacing:-.005em;line-height:1.25}
+  .bene p{font-size:.94rem;color:var(--tinta-2);margin-top:4px;line-height:1.5}
+
+  /* ---------- cita ---------- */
+  .cita{padding:clamp(64px,8vw,104px) 0;text-align:center;background:var(--papel)}
+  .cita__in{max-width:820px;margin:0 auto}
+  .cita p{font-size:clamp(1.42rem,3.1vw,2.35rem);line-height:1.24;letter-spacing:-.022em;font-weight:500;text-wrap:balance}
+  .cita__ln{width:44px;height:1px;background:var(--linea);margin:0 auto 30px}
+
+  /* ---------- pack ---------- */
+  .pack{background:var(--papel);padding-bottom:var(--pad-sec)}
+  .pack__grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1fr);gap:clamp(32px,5vw,76px);align-items:center}
+  .pack__foto{border-radius:var(--r-img);overflow:hidden;background:var(--greige)}
+  .pack__foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 64%}
+  .label{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--tinta-2);margin-bottom:18px}
+  h2{font-size:clamp(1.85rem,3.5vw,2.9rem);font-weight:800;letter-spacing:-.03em;line-height:1.06}
+  .lead{margin-top:20px;font-size:1.03rem;color:var(--tinta-2);max-width:46ch;text-wrap:pretty}
+  .ticks{margin-top:26px;display:grid;gap:12px}
+  .ticks li{display:flex;gap:13px;align-items:flex-start;font-size:.97rem}
+  .ticks li::before{content:"";flex:none;width:7px;height:7px;margin-top:.56em;border:1px solid var(--canela);border-radius:50%}
+  .pack .precio{margin-top:30px}
+  .pack .cta-row{margin-top:28px}
+
+  /* ---------- colores ---------- */
+  .colores{background:var(--crema);padding:var(--pad-sec) 0}
+  .label--flank{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:16px}
+  .label--flank::before,.label--flank::after{content:"";height:1px;background:var(--linea);flex:1;max-width:140px}
+  .colores h2{text-align:center;max-width:17ch;margin:0 auto;text-wrap:balance}
+  .colores__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:clamp(32px,5vw,72px);align-items:center;margin-top:clamp(40px,5vw,62px)}
+  .colores__foto{border-radius:var(--r-img);overflow:hidden;background:var(--greige);max-width:470px}
+  .colores__foto img{width:100%;aspect-ratio:167/127;object-fit:cover;object-position:center 55%}
+  .sw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 28px;max-width:420px}
+  .sw li{display:flex;align-items:center;gap:16px}
+  .sw i{flex:none;width:54px;height:54px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(26,26,26,.13)}
+  .sw b{font-size:1.04rem;font-weight:700;letter-spacing:-.008em;color:var(--tinta)}
+  .colores__nota{margin-top:34px;font-size:.98rem;color:var(--tinta-2);max-width:42ch;text-wrap:pretty}
+  .colores__cta{display:inline-flex;margin-top:16px}
+
+  /* ---------- bralettes ---------- */
+  .bral{background:var(--greige);padding:var(--pad-sec) 0}
+  .bral__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.82fr);gap:clamp(32px,5vw,76px);align-items:center}
+  .tag{display:inline-flex;align-items:center;gap:9px;background:var(--tinta);color:var(--papel);font-size:10px;font-weight:700;letter-spacing:.19em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:22px}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--nude)}
+  .bral__pre{font-size:clamp(1.05rem,1.7vw,1.28rem);color:var(--tinta-2);margin-bottom:16px;max-width:26ch;line-height:1.35;text-wrap:pretty}
+  .bral__precio{display:inline-flex;align-items:baseline;gap:14px;margin-top:26px;background:var(--nude);border-radius:var(--r-box);padding:16px 30px}
+  .bral__precio b{font-size:clamp(1.9rem,3.2vw,2.5rem);font-weight:800;letter-spacing:-.03em;line-height:1}
+  .bral__precio b i{font-style:normal;font-size:.55em;font-weight:700;vertical-align:.15em}
+  .bral__precio span{font-size:.95rem;color:rgba(26,26,26,.7)}
+  .bral__foto{border-radius:var(--r-img);overflow:hidden;background:var(--crema);max-width:382px;justify-self:end}
+  .bral__foto img{width:100%;aspect-ratio:75/83;object-fit:cover;object-position:center top}
+
+  /* ---------- instagram ---------- */
+  .ig{background:var(--papel);padding:var(--pad-sec) 0}
+  .ig__head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:26px}
+  .ig h2{font-size:clamp(1.5rem,2.4vw,2rem)}
+  .ig__grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+  .ig__grid a{display:block;border-radius:var(--r-tile);overflow:hidden;background:var(--greige)}
+  .ig__grid img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:opacity .25s ease,transform .4s ease}
+  .ig__grid a:hover img{opacity:.9;transform:scale(1.03)}
+
+  /* ---------- envios ---------- */
+  .envios{background:var(--canela);color:#F6F1ED}
+  .envios__in{display:flex;flex-wrap:wrap;justify-content:center;gap:14px clamp(28px,5vw,72px);padding:26px 0}
+  .envios li{display:flex;align-items:center;gap:11px;font-size:.86rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .envios svg{width:17px;height:17px;opacity:.92;flex:none}
+
+  /* ---------- footer ---------- */
+  .foot{background:var(--tinta);color:#E7E3DE;padding-top:clamp(52px,6vw,78px)}
+  .foot__grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px clamp(32px,6vw,90px);align-items:start}
+  .foot__logo{width:96px;height:96px;border-radius:12px;overflow:hidden}
+  .foot__logo img{width:100%}
+  .foot__tag{margin-top:22px;font-size:1.06rem;color:#CFC9C3;max-width:30ch;line-height:1.45;text-wrap:pretty}
+  .foot__cols{display:flex;gap:clamp(32px,5.5vw,74px);flex-wrap:wrap}
+  .foot h4{margin:0 0 14px;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#948B84}
+  .foot li{margin-bottom:10px;font-size:.95rem;color:#E7E3DE}
+  .foot li a{border-bottom:1px solid rgba(231,227,222,.24);padding-bottom:2px;transition:color .2s,border-color .2s}
+  .foot li a:hover{color:#fff;border-color:#fff}
+  .foot__bar{margin-top:clamp(44px,5vw,64px);border-top:1px solid rgba(231,227,222,.14);padding:22px 0 118px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#948B84}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1020px){
+    .benes__grid{grid-template-columns:1fr 1fr;gap:32px}
+    .ig__grid{grid-template-columns:repeat(3,1fr)}
+  }
+  @media (max-width:860px){
+    .nav{display:none}
+    .hero__grid{grid-template-columns:1fr;gap:0}
+    .hero__copy{padding-bottom:clamp(26px,4vw,44px)}
+    .hero__foto{justify-self:end}
+    .hero__foto img{height:clamp(340px,48vw,440px)}
+    .pack__grid,.colores__grid,.bral__grid{grid-template-columns:1fr;gap:36px}
+    .pack__foto{order:2}
+    .bral__foto{order:2;max-width:360px;justify-self:start}
+    .colores__foto{max-width:520px}
+    .sw{max-width:none}
+    .foot__grid{grid-template-columns:1fr}
+  }
+  @media (max-width:620px){
+    body{font-size:16px}
+    .hero{padding-top:34px}
+    .hero__foto{justify-self:center}
+    .hero__foto img{height:clamp(330px,74vw,420px)}
+    .eyebrow{margin-bottom:14px;letter-spacing:.2em}
+    .rule-heart{margin:20px 0 12px}
+    .precio{margin-top:24px;padding:18px 30px 20px}
+    .cta-row{margin-top:24px;gap:12px 18px}
+    .btn{padding:14px 24px}
+    .hero__nota{margin-top:20px}
+    .benes__grid{grid-template-columns:1fr;gap:24px}
+    .bene__ic{width:46px;height:46px}
+    .bene__ic svg{width:23px;height:23px}
+    .sw{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px}
+    .sw i{width:44px;height:44px}
+    .sw b{font-size:.98rem}
+    .colores__nota{margin-top:26px}
+    .ig__grid{grid-template-columns:repeat(3,1fr);gap:8px}
+    .envios__in{flex-direction:column;align-items:flex-start;gap:12px;padding:24px 0}
+    .foot__cols{gap:30px 36px}
+    .foot__bar{padding-bottom:132px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="wrap head__in">
+    <a class="mark" href="#top" aria-label="MATERIA BASICS, inicio">
+      <b>MATERIA</b><span>BASICS</span>
+    </a>
+    <nav class="nav">
+      <a href="#cacheteros">Cacheteros</a>
+      <a href="#colores">Colores</a>
+      <a href="#bralettes">Bralettes</a>
+      <a href="#envios">Envíos</a>
+    </nav>
+    <a class="head__cta" href="https://wa.me/51989680346" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5a8.5 8.5 0 1 1 15.5-4.4z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Algodón peruano de exportación</p>
+        <h1>No marca,<br>libre de elásticos</h1>
+        <div class="rule-heart" aria-hidden="true">
+          <svg viewBox="0 0 20 18" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15.6S3 11.4 3 6.9C3 4.7 4.7 3 6.7 3 8 3 9.3 3.7 10 4.8 10.7 3.7 12 3 13.3 3 15.3 3 17 4.7 17 6.9c0 4.5-7 8.7-7 8.7z"/></svg>
+        </div>
+        <p class="hero__sub">Cobertura abdominal</p>
+
+        <div class="precio">
+          <p class="precio__top">10 cacheteros</p>
+          <p class="precio__a">a</p>
+          <p class="precio__val"><i>S/</i>109</p>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn" href="https://wa.me/51989680346" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5a8.5 8.5 0 1 1 15.5-4.4z"/></svg>
+            Pedir por WhatsApp
+          </a>
+          <a class="lnk" href="#colores">Ver los colores</a>
+        </div>
+
+        <p class="hero__nota">Envíos a todo el Perú</p>
+      </div>
+
+      <figure class="hero__foto">
+        <img src="./assets/hero-modelo-fade.jpg" width="584" height="692" fetchpriority="high" decoding="async" alt="Modelo con el cachetero de MATERIA BASICS en color beige, sin elásticos y con cobertura abdominal">
+      </figure>
+    </div>
+  </section>
+
+  <section class="benes">
+    <div class="wrap benes__grid">
+      <div class="bene">
+        <div class="bene__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19.4 4.6c0 7.3-4.8 11.9-11 11.9H4.9C4.9 9.2 9.7 4.6 15.9 4.6h3.5z"/>
+            <path d="M4.6 19.4c2.6-4.2 5.7-6.8 9.4-8.4"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Algodón peruano de exportación</h3>
+          <p>No jetea.</p>
+        </div>
+      </div>
+      <div class="bene">
+        <div class="bene__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3.4l6.4 2.5v5.2c0 4-2.6 7.1-6.4 8.2-3.8-1.1-6.4-4.2-6.4-8.2V5.9L12 3.4z"/><path d="M9.4 12.1l1.9 1.9 3.4-3.6"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Antialérgico</h3>
+          <p>Protege de malos olores.</p>
+        </div>
+      </div>
+      <div class="bene">
+        <div class="bene__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.9" y="8.8" width="18.2" height="6.4" rx="3.2"/>
+            <path d="M7.5 8.8v2.7M12 8.8v3.5M16.5 8.8v2.7"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Tallas completas</h3>
+          <p>Se adapta al cuerpo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cita">
+    <div class="wrap cita__in">
+      <div class="cita__ln"></div>
+      <p>¿Hace cuánto no encuentras un calzón que realmente te encante?</p>
+    </div>
+  </section>
+
+  <section class="pack" id="cacheteros">
+    <div class="wrap pack__grid">
+      <figure class="pack__foto">
+        <img src="./assets/post-girdle.jpg" width="360" height="640" decoding="async" alt="Cacheteros MATERIA BASICS doblados en blanco, beige, canela y negro">
+      </figure>
+      <div class="pack__copy">
+        <p class="label">El pack</p>
+        <h2>10 cacheteros<br>a S/109</h2>
+        <p class="lead">El básico de la casa: cobertura abdominal, sin elásticos que aprieten y en algodón peruano de exportación. Los tienes en blanco, beige, negro y canela.</p>
+        <ul class="ticks">
+          <li>No marca y es libre de elásticos.</li>
+          <li>Algodón peruano de exportación que no jetea.</li>
+          <li>Antialérgico y protege de malos olores.</li>
+          <li>Tallas completas: se adapta al cuerpo.</li>
+        </ul>
+        <div class="precio">
+          <p class="precio__top">10 cacheteros</p>
+          <p class="precio__a">a</p>
+          <p class="precio__val"><i>S/</i>109</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="https://wa.me/51989680346" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5a8.5 8.5 0 1 1 15.5-4.4z"/></svg>
+            Pedir el pack
+          </a>
+          <a class="lnk" href="#colores">Elegir colores</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="colores" id="colores">
+    <div class="wrap">
+      <p class="label label--flank"><span>Colores disponibles</span></p>
+      <h2>Cuatro tonos que combinan con todo</h2>
+      <div class="colores__grid">
+        <figure class="colores__foto">
+          <img src="./assets/colores-flatlay-crop.jpg" width="668" height="508" decoding="async" alt="Los cuatro colores de los cacheteros MATERIA BASICS sobre la mesa">
+        </figure>
+        <div>
+          <ul class="sw">
+            <li><i style="background:#F2EFEA"></i><b>Blanco</b></li>
+            <li><i style="background:#CEA593"></i><b>Beige</b></li>
+            <li><i style="background:#1A1A1A"></i><b>Negro</b></li>
+            <li><i style="background:#7D5F55"></i><b>Canela</b></li>
+          </ul>
+          <p class="colores__nota">¿No sabes cuál te queda mejor? Escríbenos y te ayudamos a armar tu pack antes de coordinar el envío.</p>
+          <a class="lnk colores__cta" href="https://wa.me/51989680346" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bral" id="bralettes">
+    <div class="wrap bral__grid">
+      <div>
+        <span class="tag">Últimas unidades</span>
+        <p class="bral__pre">¿Tu brasier te aprieta, te incomoda o te deja marcas?</p>
+        <h2>2 bralettes<br>x S/49</h2>
+        <p class="lead">La misma promesa de la marca, ahora arriba: un bralette que te ajusta sin marcarte la piel.</p>
+        <div class="bral__precio">
+          <b><i>S/</i>49</b>
+          <span>por 2 bralettes</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="https://wa.me/51989680346" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5a8.5 8.5 0 1 1 15.5-4.4z"/></svg>
+            Consultar disponibilidad
+          </a>
+        </div>
+      </div>
+      <figure class="bral__foto">
+        <img src="./assets/bralette-crop.jpg" width="600" height="664" decoding="async" alt="Bralette MATERIA BASICS en color rosa">
+      </figure>
+    </div>
+  </section>
+
+  <section class="ig">
+    <div class="wrap">
+      <div class="ig__head">
+        <div>
+          <p class="label">En Instagram</p>
+          <h2>@materia.confecciones</h2>
+        </div>
+        <a class="lnk" href="https://www.instagram.com/materia.confecciones/" target="_blank" rel="noopener">Seguir la cuenta</a>
+      </div>
+      <div class="ig__grid">
+        <a href="https://www.instagram.com/materia.confecciones/" target="_blank" rel="noopener"><img src="./assets/post-cacheteros.jpg" width="640" height="640" decoding="async" alt="Publicación: no marca, libre de elásticos, 10 cacheteros a S/109"></a>
+        <a href="https://www.instagram.com/materia.confecciones/" target="_blank" rel="noopener"><img src="./assets/post-calzon.jpg" width="360" height="640" decoding="async" alt="Publicación con los cuatro colores de cacheteros"></a>
+        <a href="https://www.instagram.com/materia.confecciones/" target="_blank" rel="noopener"><img src="./assets/post-piel.jpg" width="360" height="640" decoding="async" alt="Publicación del cachetero negro"></a>
+        <a href="https://www.instagram.com/materia.confecciones/" target="_blank" rel="noopener"><img src="./assets/post-bralette2.jpg" width="360" height="640" decoding="async" alt="Publicación con bralettes en varios colores"></a>
+        <a href="https://www.instagram.com/materia.confecciones/" target="_blank" rel="noopener"><img src="./assets/post-modelo.jpg" width="360" height="640" decoding="async" alt="Publicación de clienta mostrando cómo queda bajo el vestido"></a>
+        <a href="https://www.instagram.com/materia.confecciones/" target="_blank" rel="noopener"><img src="./assets/post-bralette-liq.jpg" width="360" height="640" decoding="async" alt="Publicación de la promoción de bralettes, últimas unidades"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="envios" id="envios">
+    <ul class="wrap envios__in">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5h11v9H3zM14 10.5h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg>
+        Envíos a todo el Perú
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.5-4.5a8.5 8.5 0 1 1 15.5-4.4z"/></svg>
+        Pedidos por WhatsApp
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.6"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".9" fill="currentColor" stroke="none"/></svg>
+        Síguenos en @materia.confecciones
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <div class="foot__logo"><img src="./assets/logo.jpg" width="150" height="150" decoding="async" alt="MATERIA BASICS"></div>
+        <p class="foot__tag">Básicos premium para todos los días.</p>
+      </div>
+      <div class="foot__cols">
+        <div>
+          <h4>Escríbenos</h4>
+          <ul>
+            <li><a href="https://wa.me/51989680346" target="_blank" rel="noopener">WhatsApp +51 989 680 346</a></li>
+            <li><a href="https://www.instagram.com/materia.confecciones/" target="_blank" rel="noopener">@materia.confecciones</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="#cacheteros">Pack de 10 cacheteros</a></li>
+            <li><a href="#bralettes">Bralettes 2 x S/49</a></li>
+            <li><a href="#colores">Colores disponibles</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Dónde estamos</h4>
+          <ul>
+            <li>Lima, Perú</li>
+            <li>Envíos a todo el país</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot__bar">© 2026 MATERIA BASICS</div>
+  </div>
+</footer>
+
+  <div data-ijv-demo-badge style="position:relative;z-index:1;padding:14px 16px 90px;text-align:center;font:400 12px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#94a3b8;background:#0f172a">
+    Demo preparada por <a href="https://ijvagency.com/" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:underline">IJV Agency</a> para MATERIA BASICS — sitio de muestra, no es la web oficial.
+  </div>
+  <script>
+window["materiaAgentConfig"] = Object.assign(window["materiaAgentConfig"] || {}, { webhook: "https://meta.ijvagency.com/webhook/materia-demo-agent", leadsWebhook: "https://meta.ijvagency.com/webhook/materia-demo-leads" });
+/* ============================================================================
+ * MATERIA BASICS — Widget de chat embebible (IJV Agency)
+ * ----------------------------------------------------------------------------
+ * Generado por IJV Factory — NO editar a mano: cambios van al factory.config.json
+ * y se regenera. Patrón canónico extraído de mmdent/widget/agent.js.
+ *
+ * Distribución recomendada vía jsDelivr (repo público):
+ *   https://cdn.jsdelivr.net/gh/nachojr2003/materia-site@main/widget/agent.js
+ *
+ * Uso en el sitio del cliente:
+ *   <script>
+ *     window.materiaAgentConfig = { }; // overrides opcionales — los defaults van embebidos
+ *   <\/script>
+ *   <script src=".../widget/agent.js" defer><\/script>
+ *
+ * Sin dependencias externas. IIFE puro, vanilla JS (ES5).
+ * ============================================================================ */
+(function () {
+  'use strict';
+
+  /* ---------------- Config con DEFAULTS embebidos (regla #11: si el
+   * integrador pasa config parcial, NADA queda undefined) ---------------- */
+  var DEFAULTS = {
+    n8nBase:        "https://meta.ijvagency.com",
+    webhook:        null,
+    leadsWebhook:   null,
+    privacyUrl:     '/politica-privacidad',
+    logoUrl:        "https://materia-demo-tau.vercel.app/assets/logo.jpg",
+    primary:        '#7D5F55',
+    secondary:      '#1A1A1A',
+    accent:         '#F5F5F5',
+    fontFamily:     "Inter,system-ui,-apple-system,'Segoe UI',sans-serif,'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji'",
+    timeoutMs:      45000,   /* >= 30s: queries con RAG completo cortan a 15s (regla #10).
+                              * 45000 y no 40000: la espera real que ve el usuario es
+                              * timeoutMs × (1 + maxRetries), así que el knob que importa
+                              * es maxRetries. Un turno vivo nunca llega a 40s (RAG p99
+                              * ~10s + self-call del retry-on-empty ~5s, regla #84): entre
+                              * 40 y 45 solo cambia cuánto tarda en rendirse lo ya muerto. */
+    maxRetries:     1,
+    typewriter:     true,
+    typewriterCps:  90,
+    agentName:      "Vera",
+    clientName:     "MATERIA BASICS",
+    /* Subtítulo del encabezado: dice a QUÉ ATIENDE el agente, nunca qué es. Una
+     * etiqueta de bot aquí lo delata antes de que escriba una palabra (regla
+     * #114). Se personaliza con `agente.subtitulo_widget` en el config. */
+    headerSubtitle: "Pedidos y consultas",
+
+    whatsappNumber: "+51 989 680 346",
+    whatsappLink:   "https://wa.me/51989680346",
+
+
+    welcomeMessage: "Hola, soy Vera, de MATERIA BASICS. Te cuento del pack de 10 cacheteros, los colores, los bralettes y los envíos, y coordino con el equipo para tu pedido. ¿Qué estás buscando?"
+  };
+  var CFG = window.materiaAgentConfig = window.materiaAgentConfig || {};
+  for (var k in DEFAULTS) { if (CFG[k] === undefined || CFG[k] === null) CFG[k] = DEFAULTS[k]; }
+  if (!CFG.webhook)      CFG.webhook      = CFG.n8nBase + '/webhook/materia-agent';
+  if (!CFG.leadsWebhook) CFG.leadsWebhook = CFG.n8nBase + '/webhook/materia-leads';
+
+  var QUICK_BUTTONS = [{"label":"El pack de 10","mensaje":"Cuéntame del pack de 10 cacheteros a S/109"},{"label":"Colores","mensaje":"¿Qué colores tienen disponibles?"},{"label":"2 bralettes x S/49","mensaje":"Quiero saber de la promoción de bralettes"}];
+
+  /* ---------------- Utilidades ---------------- */
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function parseMd(text) {
+    var s = escapeHtml(text);
+    s = s.replace(/```([\s\S]*?)```/g, function (_, c) { return '<pre>' + c + '</pre>'; });
+    s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+    s = s.replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    s = s.replace(/(^|\s)(https?:\/\/[^\s<]+)/g,
+      '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+    s = s.replace(/(^|\n)- (.+)/g, '$1<li>$2</li>');
+    s = s.replace(/(<li>[\s\S]*?<\/li>)(?!\s*<li>)/g, '<ul>$1</ul>');
+    /* Regla #27: strip de placeholders alucinados por el LLM.
+       Restringido a placeholders CONOCIDOS: un strip genérico \[[a-z_]+\]
+       borraba texto legítimo entre corchetes (ej. "[PDF]", "[borrador]"). */
+    s = s.replace(/\{\{[^}]+\}\}/g, '').replace(/\{first_name\}/gi, '')
+      .replace(/\[(nombre|name|first_name|usuario|user)\]/gi, '');
+    /* Segunda capa: MARCAS INTERNAS del sistema. El nodo Finalize del workflow ya
+       las strippea; esto es la red por si un turno las deja pasar — el usuario
+       jamás debe leer "[CONSENT_OK]" ni "[PENDIENTE CLIENTE: precio]".
+       Lista EXPLÍCITA a propósito: un \[[A-Z_]{3,}\] genérico borraría texto
+       legítimo del negocio ("[PDF]", "[IVA]", "[RUC]") — misma lección que el
+       strip de placeholders de arriba (regla #27). Marca nueva en un workflow
+       ⇒ agregarla también aquí. */
+    s = s.replace(/\[\/?(CONSENT_OK|CONSENT|HANDOFF|ESCALATED|ESCALAR|LEAD_OK|NO_KB|IMG:[^\]]*|PENDIENTE[^\]]*)\]/gi, '');
+    s = s.replace(/\n{2,}/g, '</p><p>').replace(/\n/g, '<br>');
+    return '<p>' + s + '</p>';
+  }
+  function uuid() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+  /* Regla #61: TTL de inactividad — Cmd+Shift+R NO limpia sessionStorage; sin
+   * TTL la Simple Memory del agente arrastra la conversación vieja. */
+  var SESSION_TTL_MS = 30 * 60 * 1000;
+  var SS_PREFIX = 'materia_';
+  function getSessionId() {
+    var s = sessionStorage.getItem(SS_PREFIX + 'session_id');
+    var last = parseInt(sessionStorage.getItem(SS_PREFIX + 'session_last') || '0', 10);
+    var now = Date.now();
+    if (!s || (last && (now - last) > SESSION_TTL_MS)) {
+      s = uuid();
+      sessionStorage.setItem(SS_PREFIX + 'session_id', s);
+      sessionStorage.removeItem(SS_PREFIX + 'messages');
+    }
+    sessionStorage.setItem(SS_PREFIX + 'session_last', String(now));
+    return s;
+  }
+  function resetSession() {
+    sessionStorage.removeItem(SS_PREFIX + 'session_id');
+    sessionStorage.removeItem(SS_PREFIX + 'session_last');
+    sessionStorage.removeItem(SS_PREFIX + 'messages');
+    return getSessionId();
+  }
+
+  /* Persistencia de mensajes: sobreviven al refresh, no al cerrar la pestaña */
+  function loadMessages() {
+    try { return JSON.parse(sessionStorage.getItem(SS_PREFIX + 'messages') || '[]'); }
+    catch (e) { return []; }
+  }
+  function saveMessage(role, text) {
+    try {
+      var m = loadMessages();
+      m.push({ role: role, text: text });
+      if (m.length > 60) m = m.slice(-60);
+      sessionStorage.setItem(SS_PREFIX + 'messages', JSON.stringify(m));
+    } catch (e) { /* quota: silencioso */ }
+  }
+
+  /* ---------------- CSS inyectado ----------------
+   * Regla #15: CSS defensivo para <img> (librerías emoji del sitio convierten
+   * unicode a <img>; sin esto un 👋 sale de 600px) + fuentes emoji en la pila. */
+  var CSS = [
+    ':root{--ijv-primary:' + CFG.primary + ';--ijv-secondary:' + CFG.secondary + ';--ijv-accent:' + CFG.accent + ';}',
+    '.ijv-launcher{position:fixed;bottom:22px;right:22px;height:60px;padding:0 22px;border-radius:30px;background:#fff;color:var(--ijv-primary);border:0;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;z-index:2147483000;transition:transform .2s ease}',
+    '.ijv-launcher:hover{transform:scale(1.05)}',
+    '.ijv-launcher img{height:36px;width:auto;display:block;object-fit:contain}',
+    '.ijv-root *,.ijv-root *::before,.ijv-root *::after{box-sizing:border-box}',
+    '.ijv-root{position:fixed;bottom:100px;right:22px;width:380px;max-width:calc(100vw - 24px);height:600px;max-height:calc(100vh - 120px);background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.25);display:flex;flex-direction:column;overflow:hidden;z-index:2147483000;font-family:' + CFG.fontFamily + ';color:var(--ijv-secondary);transform:translateY(20px);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .2s ease}',
+    '.ijv-root.ijv-open{transform:translateY(0);opacity:1;pointer-events:auto}',
+    '.ijv-head{background:var(--ijv-primary);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}',
+    '.ijv-head img{height:44px;width:auto;background:#fff;border-radius:10px;padding:6px 10px;flex-shrink:0;display:block}',
+    '.ijv-head .ijv-title{font-weight:700;font-size:15px;line-height:1.2}',
+    '.ijv-head .ijv-sub{font-size:12px;opacity:.85}',
+    '.ijv-head .ijv-actions{margin-left:auto;display:flex;gap:6px}',
+    '.ijv-head button{background:rgba(255,255,255,.15);border:0;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px}',
+    '.ijv-head button:hover{background:rgba(255,255,255,.28)}',
+    '.ijv-msgs{flex:1;overflow-y:auto;padding:16px;background:#FAFAFA;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}',
+    '.ijv-msg{max-width:84%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.45;word-wrap:break-word}',
+    '.ijv-msg p{margin:0 0 6px}.ijv-msg p:last-child{margin:0}',
+    '.ijv-msg ul{margin:4px 0 4px 18px;padding:0}.ijv-msg li{margin:2px 0}',
+    '.ijv-msg a{color:var(--ijv-primary);text-decoration:underline}',
+    '.ijv-msg code{background:rgba(0,0,0,.08);padding:1px 5px;border-radius:4px;font-size:13px}',
+    '.ijv-msg img{max-width:1.2em!important;max-height:1.2em!important;display:inline-block!important;vertical-align:text-bottom!important}',
+    '.ijv-bot{align-self:flex-start;background:#fff;border:1px solid #E8E8E8;border-top-left-radius:4px;color:var(--ijv-secondary)}',
+    '.ijv-user{align-self:flex-end;background:var(--ijv-primary);color:#fff;border-top-right-radius:4px}',
+    '.ijv-user a{color:#fff}',
+    '.ijv-typing{align-self:flex-start;display:flex;gap:4px;padding:10px 14px;background:#fff;border:1px solid #E8E8E8;border-radius:14px;border-top-left-radius:4px}',
+    '.ijv-typing span{width:7px;height:7px;background:var(--ijv-primary);border-radius:50%;opacity:.4;animation:ijvBlink 1.2s infinite}',
+    '.ijv-typing span:nth-child(2){animation-delay:.2s}.ijv-typing span:nth-child(3){animation-delay:.4s}',
+    '@keyframes ijvBlink{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}',
+    '.ijv-cta{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 6px}',
+    '.ijv-pill{background:var(--ijv-accent);color:var(--ijv-primary);border:1px solid rgba(0,0,0,.08);padding:6px 12px;border-radius:999px;font-size:12.5px;cursor:pointer;font-weight:600;transition:all .15s;font-family:inherit}',
+    '.ijv-pill:hover{background:var(--ijv-primary);color:#fff;border-color:var(--ijv-primary)}',
+    '.ijv-form{background:#fff;border:1px solid #E8E8E8;border-radius:12px;padding:14px;margin:8px 0;display:flex;flex-direction:column;gap:8px;align-self:stretch}',
+    '.ijv-form h4{margin:0 0 4px;font-size:14px;color:var(--ijv-secondary)}',
+    '.ijv-form input,.ijv-form textarea{width:100%;padding:9px 11px;border:1px solid #D8D8D8;border-radius:8px;font-size:13.5px;font-family:inherit;color:var(--ijv-secondary);background:#fff}',
+    '.ijv-form input:focus,.ijv-form textarea:focus{outline:none;border-color:var(--ijv-primary)}',
+    '.ijv-form button{background:var(--ijv-primary);color:#fff;border:0;padding:10px;border-radius:8px;font-weight:600;cursor:pointer;font-size:13.5px;font-family:inherit}',
+    '.ijv-form button:disabled{opacity:.6;cursor:wait}',
+    '.ijv-form .ijv-hp{display:none!important}',
+    '.ijv-form .ijv-legal{margin:0;font-size:10.5px;line-height:1.45;color:#8a8a8a}',
+    '.ijv-form .ijv-legal a{color:var(--ijv-primary);text-decoration:underline}',
+    '.ijv-cal{background:linear-gradient(135deg,var(--ijv-primary),var(--ijv-secondary));border-radius:12px;padding:16px;margin:8px 0;align-self:stretch;color:#fff}',
+    '.ijv-cal p{margin:0 0 10px;font-size:13.5px;line-height:1.45}',
+    '.ijv-cal a{display:inline-block;background:#fff;color:var(--ijv-primary);font-weight:700;padding:9px 16px;border-radius:8px;text-decoration:none;font-size:13.5px}',
+    '.ijv-input{display:flex;gap:8px;padding:12px;border-top:1px solid #E8E8E8;background:#fff;align-items:flex-end}',
+    '.ijv-input textarea{flex:1;border:1px solid #D8D8D8;border-radius:12px;padding:10px 12px;font-family:inherit;font-size:14px;resize:none;max-height:100px;min-height:40px;color:var(--ijv-secondary)}',
+    '.ijv-input textarea:focus{outline:none;border-color:var(--ijv-primary)}',
+    '.ijv-input button{background:var(--ijv-primary);color:#fff;border:0;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}',
+    '.ijv-input button:disabled{opacity:.5;cursor:not-allowed}',
+    '.ijv-input button svg{width:18px;height:18px;fill:#fff}',
+    '.ijv-foot{padding:8px 12px 10px;background:#fff;border-top:1px solid #E8E8E8;text-align:center;font-size:10.5px;color:#8a8a8a;line-height:1.5}',
+    '.ijv-foot a{color:var(--ijv-primary);text-decoration:none;font-weight:600}',
+    '.ijv-foot a:hover{text-decoration:underline}',
+    '.ijv-foot .ijv-foot-powered{display:block;margin-top:3px;font-size:10px;color:#9a9a9a}',
+    '.ijv-foot .ijv-foot-powered a{color:#9a9a9a;font-weight:500}',
+    '.ijv-toast{position:absolute;top:70px;left:50%;transform:translateX(-50%);background:var(--ijv-secondary);color:#fff;padding:8px 14px;border-radius:8px;font-size:12.5px;opacity:0;transition:opacity .2s;pointer-events:none}',
+    '.ijv-toast.ijv-show{opacity:.95}',
+    '@media (max-width:480px){.ijv-root{width:calc(100vw - 16px);height:calc(100vh - 90px);bottom:80px;right:8px}.ijv-launcher{bottom:16px;right:16px;height:54px;padding:0 18px}.ijv-launcher img{height:32px}}'
+  ].join('');
+
+  /* ---------------- Render de la UI ---------------- */
+  var styleEl = document.createElement('style');
+  styleEl.textContent = CSS;
+  document.head.appendChild(styleEl);
+
+  var launcher = document.createElement('button');
+  launcher.className = 'ijv-launcher';
+  launcher.setAttribute('aria-label', 'Abrir chat ' + CFG.clientName);
+  launcher.innerHTML = '<img src="' + escapeHtml(CFG.logoUrl) + '" alt="' + escapeHtml(CFG.clientName) + '" />';
+  document.body.appendChild(launcher);
+
+  var root = document.createElement('div');
+  root.className = 'ijv-root';
+  root.setAttribute('role', 'dialog');
+  root.setAttribute('aria-label', 'Chat de ' + CFG.clientName);
+  root.innerHTML =
+    '<div class="ijv-head">' +
+      '<img src="' + escapeHtml(CFG.logoUrl) + '" alt="' + escapeHtml(CFG.clientName) + '" />' +
+      '<div>' +
+        '<div class="ijv-title">' + escapeHtml(CFG.clientName) + '</div>' +
+        '<div class="ijv-sub">' + escapeHtml(CFG.agentName) + ' · ' + escapeHtml(CFG.headerSubtitle) + '</div>' +
+      '</div>' +
+      '<div class="ijv-actions">' +
+        '<button type="button" class="ijv-reset" aria-label="Reiniciar conversación" title="Nueva conversación">⟳</button>' +
+        '<button type="button" class="ijv-close" aria-label="Cerrar chat" title="Cerrar">✕</button>' +
+      '</div>' +
+      '<div class="ijv-toast">Conversación reiniciada</div>' +
+    '</div>' +
+    '<div class="ijv-msgs" aria-live="polite" aria-atomic="false"></div>' +
+    '<div class="ijv-input">' +
+      '<textarea rows="1" maxlength="2000" placeholder="Escribe tu mensaje…" aria-label="Escribe tu mensaje"></textarea>' +
+      '<button type="button" class="ijv-send" aria-label="Enviar">' +
+        '<svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>' +
+      '</button>' +
+    '</div>' +
+    '<div class="ijv-foot">' +
+      'Al usar este chat aceptas la <a href="' + escapeHtml(CFG.privacyUrl) + '" target="_blank" rel="noopener">política de privacidad</a> de ' + escapeHtml(CFG.clientName) + '.' +
+      '<span class="ijv-foot-powered"><a href="https://ijvagency.com/" target="_blank" rel="noopener">Powered by IJV</a></span>' +
+    '</div>';
+  document.body.appendChild(root);
+
+  /* Logo con fallback: si la URL del logo falla (típico en demos con dominio
+   * ficticio, o si el sitio del cliente mueve el archivo), el launcher cae a un
+   * ícono de chat y el header oculta la imagen rota — nunca se ve un img roto. */
+  var CHAT_ICON = '<svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M12 3C6.48 3 2 6.94 2 11.5c0 2.3 1.13 4.38 2.97 5.88L4 21l4.02-1.6c1.2.38 2.5.6 3.98.6 5.52 0 10-3.94 10-8.5S17.52 3 12 3z"/></svg>';
+  var lImg = launcher.querySelector('img');
+  if (lImg) {
+    var lFallback = function () { launcher.innerHTML = CHAT_ICON; };
+    lImg.onerror = lFallback;
+    if (lImg.complete && lImg.naturalWidth === 0) lFallback();
+  }
+  var hImg = root.querySelector('.ijv-head img');
+  if (hImg) {
+    var hFallback = function () { hImg.style.display = 'none'; };
+    hImg.onerror = hFallback;
+    if (hImg.complete && hImg.naturalWidth === 0) hFallback();
+  }
+
+  var $msgs  = root.querySelector('.ijv-msgs');
+  var $input = root.querySelector('textarea');
+  var $send  = root.querySelector('.ijv-send');
+  var $close = root.querySelector('.ijv-close');
+  var $reset = root.querySelector('.ijv-reset');
+  var $toast = root.querySelector('.ijv-toast');
+
+  var isOpen = false;
+  var isBusy = false;
+  var welcomed = false;
+
+  /* Regla #19: rAF obligatorio — sin él Safari/iOS deja el scroll anclado
+   * arriba mientras el bot escribe. */
+  function scrollToBottom() {
+    $msgs.scrollTop = $msgs.scrollHeight;
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(function () { $msgs.scrollTop = $msgs.scrollHeight; });
+    }
+  }
+  function showToast(t) {
+    $toast.textContent = t;
+    $toast.classList.add('ijv-show');
+    setTimeout(function () { $toast.classList.remove('ijv-show'); }, 1800);
+  }
+  function pushUser(text, opts) {
+    var div = document.createElement('div');
+    div.className = 'ijv-msg ijv-user';
+    div.textContent = text;
+    $msgs.appendChild(div);
+    scrollToBottom();
+    if (!opts || !opts.skipSave) saveMessage('user', text);
+  }
+  function pushBot(text, opts) {
+    opts = opts || {};
+    var div = document.createElement('div');
+    div.className = 'ijv-msg ijv-bot';
+    $msgs.appendChild(div);
+    if (!opts.skipSave) saveMessage('bot', text);
+    if (CFG.typewriter && !opts.instant) {
+      typewrite(div, text);
+    } else {
+      div.innerHTML = parseMd(text);
+      scrollToBottom();
+    }
+    return div;
+  }
+  /* Typewriter: re-parsea markdown en cada step y scrollea con rAF (regla #19) */
+  function typewrite(div, fullText) {
+    var i = 0;
+    var step = Math.max(1, Math.round(CFG.typewriterCps / 30));
+    var timer = setInterval(function () {
+      i += step;
+      if (i >= fullText.length) {
+        clearInterval(timer);
+        div.innerHTML = parseMd(fullText);
+        scrollToBottom();
+        return;
+      }
+      div.innerHTML = parseMd(fullText.slice(0, i));
+      scrollToBottom();
+    }, 33);
+  }
+  function pushCTA(buttons) {
+    var row = document.createElement('div');
+    row.className = 'ijv-cta';
+    buttons.forEach(function (b) {
+      var p = document.createElement('button');
+      p.type = 'button';
+      p.className = 'ijv-pill';
+      p.textContent = b.label;
+      p.addEventListener('click', b.onClick);
+      row.appendChild(p);
+    });
+    $msgs.appendChild(row);
+    scrollToBottom();
+    return row;
+  }
+  function showTyping() {
+    var t = document.createElement('div');
+    t.className = 'ijv-typing';
+    t.innerHTML = '<span></span><span></span><span></span>';
+    $msgs.appendChild(t);
+    scrollToBottom();
+    return t;
+  }
+  function removeEl(el) { if (el && el.parentNode) el.parentNode.removeChild(el); }
+
+  /* ---------------- Call al webhook del agente ---------------- */
+  function callAgent(message, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var timer = setTimeout(function () { ctrl.abort(); }, CFG.timeoutMs);
+    return fetch(CFG.webhook, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: message,
+        sessionId: getSessionId(),
+        origin: window.location.origin,
+        channel: 'web'
+      }),
+      signal: ctrl.signal
+    })
+    .then(function (r) {
+      clearTimeout(timer);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .catch(function (err) {
+      clearTimeout(timer);
+      if (attempt < CFG.maxRetries) return callAgent(message, attempt + 1);
+      throw err;
+    });
+  }
+
+  /* ---------------- Lead form (honeypot anti-bot) ---------------- */
+  function showLeadForm(prefill) {
+    if ($msgs.querySelector('.ijv-form')) { scrollToBottom(); return; }
+    prefill = prefill || {};
+    var form = document.createElement('form');
+    form.className = 'ijv-form';
+    form.innerHTML =
+      '<h4>Déjanos tus datos y te contactamos</h4>' +
+      '<input type="text" name="nombre" placeholder="Nombre completo *" required value="' + escapeHtml(prefill.nombre || '') + '">' +
+      '<input type="email" name="email" placeholder="Correo electrónico *" required value="' + escapeHtml(prefill.email || '') + '">' +
+      '<input type="tel" name="telefono" placeholder="Teléfono / WhatsApp (opcional)" value="' + escapeHtml(prefill.telefono || '') + '">' +
+      '<textarea name="consulta" rows="2" placeholder="Cuéntanos brevemente (opcional)"></textarea>' +
+      '<input type="text" name="hp" class="ijv-hp" tabindex="-1" autocomplete="off">' +
+      /* Línea legal del formulario: el footer del chat enlaza la política, pero el
+       * formulario es donde el usuario ENTREGA sus datos — ahí tiene que estar el
+       * enlace (regla #14, misma lógica) y el recordatorio de qué NO mandar por
+       * este medio. La segunda frase se ajusta al vertical: un prestador de salud
+       * (legal.datos_salud) pide explícitamente no enviar estudios clínicos. */
+      '<p class="ijv-legal">Al enviar aceptas el tratamiento de tus datos conforme al ' +
+        '<a href="' + escapeHtml(CFG.privacyUrl) + '" target="_blank" rel="noopener">aviso de privacidad</a>. ' +
+        'No compartas por este medio información sensible ni documentos personales.</p>' +
+      '<button type="submit">Enviar</button>';
+    $msgs.appendChild(form);
+    scrollToBottom();
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      var fd = new FormData(form);
+      fetch(CFG.leadsWebhook, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: fd.get('nombre'),
+          email: fd.get('email'),
+          telefono: fd.get('telefono'),
+          consulta: fd.get('consulta'),
+          hp: fd.get('hp'),
+          session_id: getSessionId(),
+          origin: window.location.origin
+        })
+      })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r; })
+      .then(function () {
+        removeEl(form);
+        pushBot('¡Listo! Recibimos tus datos. El equipo de ' + CFG.clientName + ' te contacta muy pronto.', { instant: true });
+        afterLeadCTA();
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Reintentar';
+        pushBot('Hubo un problema al enviar. Por favor intenta de nuevo.', { instant: true });
+      });
+    });
+  }
+
+  /* Regla #20: el usuario que dejó datos está CALIENTE — no cerrar con
+   * "te escribimos pronto" seco: CTA inmediato a Calendly / WhatsApp. */
+  function afterLeadCTA() {
+
+
+    pushCTA([
+      { label: 'Escribir por WhatsApp', onClick: function () { window.open(CFG.whatsappLink, '_blank'); } }
+    ]);
+
+  }
+
+  /* ---------------- Intent helpers ---------------- */
+
+  function wantsWhatsapp(text) {
+    return /\b(wh?at?s?app|wsp|whats|wasap)\b/i.test(text || '');
+  }
+
+  function wantsContactForm(text) {
+    return /\b(lead|llama(me|r)|mis datos|dejo mis datos|d[ée]jame datos|quiero que me contacten)\b/i.test(text || '');
+  }
+
+  /* ---------------- Envío de mensajes ---------------- */
+  function send(text) {
+    text = (text || '').trim();
+    if (!text || isBusy) return;
+    pushUser(text);
+    $input.value = '';
+    autoSize();
+    isBusy = true;
+    $send.disabled = true;
+
+    var typing = showTyping();
+
+    callAgent(text)
+      .then(function (data) {
+        removeEl(typing);
+        var reply = (data && (data.output || data.response || data.text)) || 'Disculpa, no pude procesar tu mensaje. ¿Puedes reformularlo?';
+        pushBot(reply);
+
+        var showsForm = (data && (data.lead_intent || data.showForm)) || wantsContactForm(text);
+        var wantsContactBtn = /\b(equipo|contactar|asesor|coordinar)\b/i.test(reply);
+        var ctas = [];
+
+        if ((data && data.whatsapp) || wantsWhatsapp(text)) {
+          ctas.push({ label: 'WhatsApp ' + CFG.whatsappNumber, onClick: function () { window.open(CFG.whatsappLink, '_blank'); } });
+        }
+
+        /* Regla #18: botón persistente, NUNCA auto-open que tape la respuesta */
+        if (wantsContactBtn && !showsForm) {
+          ctas.push({ label: 'Contactar al equipo', onClick: function () { showLeadForm({ nombre: data && data.nombre, email: data && data.email, telefono: data && data.telefono }); } });
+        }
+        if (ctas.length) pushCTA(ctas);
+        if (showsForm) showLeadForm({ nombre: data && data.nombre, email: data && data.email, telefono: data && data.telefono });
+      })
+      .catch(function () {
+        removeEl(typing);
+        pushBot('Ups, tuve un problema de conexión. ¿Puedes intentarlo de nuevo? También puedes escribirnos por WhatsApp al **' + CFG.whatsappNumber + '**.', { instant: true });
+
+        pushCTA([{ label: 'WhatsApp', onClick: function () { window.open(CFG.whatsappLink, '_blank'); } }]);
+
+      })
+      .then(function () {
+        isBusy = false;
+        $send.disabled = false;
+        $input.focus();
+      });
+  }
+
+  /* ---------------- Auto-resize textarea ---------------- */
+  function autoSize() {
+    $input.style.height = 'auto';
+    $input.style.height = Math.min($input.scrollHeight, 100) + 'px';
+  }
+  $input.addEventListener('input', autoSize);
+  $input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      send($input.value);
+    }
+  });
+  $send.addEventListener('click', function () { send($input.value); });
+
+  /* ---------------- Welcome + quick buttons ---------------- */
+  function showWelcome() {
+    /* El welcome NO pasa por send(): jamás dispara detección de lead (regla #18) */
+    pushBot(CFG.welcomeMessage, { instant: true, skipSave: true });
+    if (QUICK_BUTTONS.length) {
+      pushCTA(QUICK_BUTTONS.map(function (b) {
+        return { label: b.label, onClick: function () { send(b.mensaje); } };
+      }));
+    }
+  }
+  function restoreHistory() {
+    var hist = loadMessages();
+    if (!hist.length) return false;
+    hist.forEach(function (m) {
+      if (m.role === 'user') pushUser(m.text, { skipSave: true });
+      else pushBot(m.text, { instant: true, skipSave: true });
+    });
+    return true;
+  }
+
+  /* ---------------- Open / close / reset ---------------- */
+  function openChat() {
+    isOpen = true;
+    root.classList.add('ijv-open');
+    launcher.style.display = 'none';
+    if (!welcomed) {
+      welcomed = true;
+      getSessionId(); /* aplica TTL antes de restaurar */
+      if (!restoreHistory()) showWelcome();
+    }
+    setTimeout(function () { $input.focus(); }, 200);
+  }
+  function closeChat() {
+    isOpen = false;
+    root.classList.remove('ijv-open');
+    launcher.style.display = 'flex';
+  }
+  launcher.addEventListener('click', openChat);
+  $close.addEventListener('click', closeChat);
+  $reset.addEventListener('click', function () {
+    resetSession();
+    $msgs.innerHTML = '';
+    showToast('Conversación reiniciada');
+    setTimeout(showWelcome, 250);
+  });
+
+  /* ---------------- API pública opcional ---------------- */
+  window.materiaAgent = {
+    open:  openChat,
+    close: closeChat,
+    reset: function () { $reset.click(); },
+    send:  send
+  };
+})();
+
+  </script>
+</body>
+</html>
